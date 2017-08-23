@@ -470,7 +470,7 @@ function processChatMessage(req, res) {
             
             if (context.email === "yes")
             {
-            	data.outout.text = "Email";
+            	data.output.text = "Email";
             	res.status(200).json(data);
             }
 
