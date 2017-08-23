@@ -467,6 +467,12 @@ function processChatMessage(req, res) {
             var context = data.context;
             var amount = context.claim_amount;
             var owner = req.user.username;
+            
+            if (context.email === "yes")
+            {
+            	data.outout.text = "Email";
+            	res.status(200).json(data);
+            }
 
             // File a claim for the user
             if (context.claim_step === "verify") {
