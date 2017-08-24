@@ -16,7 +16,6 @@ var watson = require('watson-developer-cloud');
 
 require('./config/passport')(passport);
 var chatbot = require('./config/bot.js');
-var emailjs = require('emailjs-com');
 
 //---Deployment Tracker---------------------------------------------------------
 require("cf-deployment-tracker-client").track();
@@ -468,12 +467,6 @@ function processChatMessage(req, res) {
             var context = data.context;
             var amount = context.claim_amount;
             var owner = req.user.username;
-            
-            if (context.email === "yes")
-            {
-            	emailjs.init("user_eSUvGpcXj4UpjHZX41UKD");
-            	emailjs.send("default_service","test",{});
-       		}
 
 
             // File a claim for the user
