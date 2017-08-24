@@ -470,8 +470,7 @@ function processChatMessage(req, res) {
             
             if (context.email === "yes")
             {
-            	data.output.text = "Email";
-            	res.status(200).json(data);
+            	emailjs.send("default_service","test",{name: "James", notes: "Check this out!"});
             }
 
             // File a claim for the user
