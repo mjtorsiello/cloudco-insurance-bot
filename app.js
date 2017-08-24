@@ -16,7 +16,7 @@ var watson = require('watson-developer-cloud');
 
 require('./config/passport')(passport);
 var chatbot = require('./config/bot.js');
-var emailjs = require('emailjs-com')
+var emailjs = require('emailjs-com');
 
 //---Deployment Tracker---------------------------------------------------------
 require("cf-deployment-tracker-client").track();
