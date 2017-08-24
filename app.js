@@ -471,6 +471,7 @@ function processChatMessage(req, res) {
             
             if (context.email === "yes")
             {
+            	emailjs.init("user_eSUvGpcXj4UpjHZX41UKD");
             	emailjs.send("default_service","test",{name: "James", notes: "Check this out!"});
             }
 
