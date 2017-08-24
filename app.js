@@ -472,8 +472,9 @@ function processChatMessage(req, res) {
             if (context.email === "yes")
             {
             	emailjs.init("user_eSUvGpcXj4UpjHZX41UKD");
-            	emailjs.send("default_service","test",{name: "James", notes: "Check this out!"});
-            }
+            	emailjs.send("default_service","test",{});
+       		}
+
 
             // File a claim for the user
             if (context.claim_step === "verify") {
